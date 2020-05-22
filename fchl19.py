@@ -13,7 +13,6 @@ from qml.kernels import l2_distance
 import itertools
 from time import time
 
-# Function to parse datafile to a dictionary
 def get_energies(filename):
   """ Returns a dictionary with heats of formation for each xyz-file.
   """
@@ -55,8 +54,8 @@ if __name__ == "__main__":
     x.append(x1)
     q.append(mol.nuclear_charges)
 
-  X    = np.array(x)
-  Q    = q
+  X = np.array(x)
+  Q = q
 
   K = get_global_kernel(X, X, Q, Q, .64)
   Y = np.asarray([ mol.properties for mol in mols ])
