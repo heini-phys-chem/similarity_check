@@ -49,9 +49,9 @@ if __name__ == "__main__":
 	x = []
 	q = []
 
-	fancy_element_list_because_anders_wants_it_that_way = [1,5,6,7,8,9,17,35]
+	list_of_elements = [1,5,6,7,8,9,17,35]
 	for mol in mols:
-		x1 = generate_fchl_acsf(mol.nuclear_charges, mol.coordinates, gradients=False, pad=21, elements=fancy_element_list_because_anders_wants_it_that_way)
+		x1 = generate_fchl_acsf(mol.nuclear_charges, mol.coordinates, gradients=False, pad=21, elements=list_of_elements)
 		x.append(x1)
 		q.append(mol.nuclear_charges)
 
